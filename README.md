@@ -16,5 +16,23 @@ Projeto em Java realizado através da imersão Java Alura 1. A aplicação conso
 - `Desafio supremo: criar alguma maneira para você dar uma avaliação ao filme, puxando de algum arquivo de configuração OU pedindo a avaliação para o usuário digitar no terminal.`
 
 ##  Desafios da Aula 02 🏷️
+
+Nesta segunda aula vamos criar um gerador de figurinhas explorando outras bibliotecas nativas do Java, para que possamos enviar por Whatsapp os nossos filmes preferidos!
+
+![godfather](https://user-images.githubusercontent.com/83513696/225489837-6b8756b3-b1ed-4e21-afb2-f584e55e0eae.png)
+![backtothefuture](https://user-images.githubusercontent.com/83513696/225490283-36c7719e-7249-4fc0-8609-88e2d2d668b8.png)
+
+- `Ler a documentação da classe abstrata InputStream.`
+- `Centralizar o texto na figurinha.`
+- `Fazer um pacote no Whatsapp e/ou Telegram com as suas próprias figurinhas!`
+- `Criar diretório de saída das imagens, se ainda não existir.`
+- `Colocar outra fonte como a Comic Sans ou a Impact, a fonte usada em memes.`
+- `Colocar uma imagem de você que está fazendo esse curso sorrindo, fazendo joinha!`
+- `Colocar contorno (outline) no texto da imagem.`
+- `Tratar as imagens retornadas pela API do IMDB para pegar uma imagem maior ao invés dos thumbnails. Opções: pegar a URL da imagem e remover o trecho mostrado durante a aula ou consumir o endpoint de posters da API do IMDB (mais trabalhoso), tratando o JSON retornado.`
+- `Fazer com que o texto da figurinha seja personalizado de acordo com as classificações do IMDB.`
+- `Desafio supremo: usar alguma biblioteca de manipulação de imagens como OpenCV pra extrair imagem principal e contorná-la.`
+
+##  Desafios da Aula 03 🏷️
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
