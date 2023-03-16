@@ -5,6 +5,8 @@ Projeto em Java realizado através da imersão Java Alura 1. A aplicação conso
 
 ## Desafios da Aula 01 🏷️
 
+![imdbterminal](https://user-images.githubusercontent.com/83513696/225493637-a3b334f0-4727-4a5f-b429-d382ebda9d85.png)
+
 - `Consumir o endpoint de filmes mais populares da API do IMDB. Procure também, na documentação da API do IMDB, o endpoint que retorna as melhores séries e o que retorna as séries mais populares.`
 
 - `Usar sua criatividade para deixar a saída dos dados mais bonitinha: usar emojis com código UTF-8, mostrar a nota do filme como estrelinhas, decorar o terminal com cores, negrito e itálico usando códigos ANSI, e mais!`
