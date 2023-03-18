@@ -5,7 +5,8 @@ Projeto em Java realizado através da imersão Java Alura 1. A aplicação conso
 
 ## Desafios da Aula 01 🏷️
 
-![imdbterminal](https://user-images.githubusercontent.com/83513696/225493637-a3b334f0-4727-4a5f-b429-d382ebda9d85.png)
+![terminalIMDB](https://user-images.githubusercontent.com/83513696/226100492-33941975-fd19-48ad-a0c9-fc6d2369024e.png)
+
 
 - `Consumir o endpoint de filmes mais populares da API do IMDB. Procure também, na documentação da API do IMDB, o endpoint que retorna as melhores séries e o que retorna as séries mais populares.`
 
