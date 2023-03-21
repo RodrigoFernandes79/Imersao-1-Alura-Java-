@@ -43,9 +43,6 @@ public class GeradoraDeFigurinhas {
 		modelarimagem.setColor(Color.YELLOW);
 		// Centralizar o texto na figurinha
 
-		if (frase == null) {
-			frase = "DEMAIS!";
-		}
 		int tamanhoFrase = modelarimagem.getFontMetrics().stringWidth(frase);
 		int posicaoLargura = (novaImagem.getWidth() - tamanhoFrase) / 2;
 		int posicaoAltura = novaAltura - 150;
@@ -59,8 +56,8 @@ public class GeradoraDeFigurinhas {
 
 		modelarimagem.setFont(fonteEmoji);
 		modelarimagem.setColor(Color.YELLOW);
-		// Centralizar as estrelas de classificação na figurinha embaixo da frase
 
+		// Centralizar as estrelas de classificação na figurinha embaixo da frase
 		int tamanhoEstrelas = modelarimagem.getFontMetrics().stringWidth(classificacao);
 		int xLargura = (novaImagem.getWidth() - tamanhoEstrelas) / 2;
 		int yAltura = novaAltura - 50;

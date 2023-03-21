@@ -1,82 +1,69 @@
 import java.io.InputStream;
-import java.net.URI;
 import java.net.URL;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
-import java.util.Map;
 
 public class App {
+	// escondendoO a chave de acesso da api IMDB em uma variavel de ambiente do
+	// windows
+	public static final String API_KEI_NASA = System.getenv("API_KEI_NASA");
+	public static final String API_KEY_IMDB = System.getenv("API_KEY_IMDB");
+
 	public static void main(String[] args) throws Exception {
 
-		// escondendo a chave de acesso da api IMDB em uma variavel de ambiente do
-		// windows
-		String api_key = System.getenv("API_KEY_IMDB");
-		// Fazer uma conexão Http e buscar os filmes mais populares
-		/*
-		 * código extraído da documentação
-		 * https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/
-		 * http/HttpRequest.html
-		 */
-		String url = "https://imdb-api.com/en/API/Top250Movies/" + api_key;
-		var endereco = URI.create(url);
-		var client = HttpClient.newHttpClient();
-		var request = HttpRequest.newBuilder(endereco).GET().build();
+		String urlAPINASA = API.API_NASA.getUrlApi();
+		// String urlApiIMDBPopular = API.API_IMDB_MOST_POPULAR_MOVIES.getUrlApi();
+		// String urlApiTop250 = API.API_IMDB_TOP250_MOVIES.getUrlApi();
+		// chamando o metodo retornaDadosApí() para retornar os dados da api:
+		ClienteHttp clienteHttp = new ClienteHttp();
+		String body = clienteHttp.retornaDadosApi(urlAPINASA);
 
-		HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-		String body = response.body();
+		ExtratorDeConteudos extratorDeConteudos = API.API_NASA.getExtratorDeConteudos();
+		GeradoraDeFigurinhas geradoraDeFigurinhas = new GeradoraDeFigurinhas();
+		List<Conteudo> extrairConteudos = extratorDeConteudos.extrairConteudos(body);
+		for (Conteudo conteudo : extrairConteudos) {
 
-		// extrair só os dados que interessam (título, poster e classificação)
-		var jsonParser = new JsonParser();
-		List<Map<String, String>> listaDeFilmes = jsonParser.parse(body);
+			var nomeArquivo = conteudo.titulo() + ".png";
+			System.out.println("\u001b[37m \u001b[44m " + conteudo.titulo() + " \u001b[m");
+			InputStream inputStream = new URL(conteudo.urlImagem()).openStream();
+			System.out.println(conteudo.urlImagem());
+			var classificacao = conteudo.classificacao();
 
-		// exibir e manipular os dados na aplicação
-		for (Map<String, String> filmesMap : listaDeFilmes) {
-			String tituloCompleto = filmesMap.get("fullTitle");
-			String emoji = "\uD83E\uDD2F";
-			System.out.print(emoji);
-			System.out.println("\u001b[37m \u001b[44m " + tituloCompleto + " \u001b[m");
-
-			String poster = filmesMap.get("image");
-			String classificacao = filmesMap.get("imDbRating");
-			System.out.println("\u001b[37m \u001b[44m nota: " + classificacao + " \u001b[m");
-			int stars = Integer.parseInt(classificacao.substring(0, 1));
-
-			for (int i = 1; i <= stars; i++) {
-				System.out.print("\u2B50");
-			}
+			// Chamando a classe que possui o metodo de criar frases de acordo com a
+			// classificação do filme
+			CriadorDeFrases criadorDeFrases = new CriadorDeFrases();
+			Frases gerarFrases = criadorDeFrases.geradorDeFrasesDeAcordoComClassificacao(classificacao);
+			String frase = gerarFrases.frase();
+			String stars = gerarFrases.stars();
+			System.out.println("\u001b[37m \u001b[44m nota: " + stars + " \u001b[m");
 			System.out.println();
+
 			// Criando figurinhas com o metodo da classe GeradoraDeFigurinhas:
 			// Tratar as imagens retornadas pela API do IMDB para pegar uma imagem maior ao
 			// invés dos thumbnails.
-			String removerStringThumbnail = "._V1_UX128_CR0,12,128,176_AL_";
-			InputStream innputStream = new URL(poster.replace(removerStringThumbnail, "")).openStream();
-			String nomeArquivo = tituloCompleto + ".png";
 
-			GeradoraDeFigurinhas geradoraDeFigurinhas = new GeradoraDeFigurinhas();
 			// criando figurinhas
-			geradoraDeFigurinhas.criarFigurinha(innputStream, nomeArquivo, starClass(stars), rating(stars));
 
+			geradoraDeFigurinhas.criarFigurinha(inputStream, nomeArquivo, frase, stars);
 		}
-	}
 
-	// metodo para criar frases de acordo com classificaçao de estrelas
-	public static String starClass(int stars) {
+		// // exibir e manipular os dados na aplicação -AULA 1
 
-		if (stars >= 9) {
-			return "TOOPZERA";
-		}
-		if (stars >= 7 && stars <= 8) {
-			return "DAHORA!";
-		}
-		return "MARROMENOS";
-	}
+		// for (Map<String, String> conteudosMap : listaDeConteudos) {
+		// String tituloCompleto = conteudosMap.get("fullTitle");
+		// String emoji = "\uD83E\uDD2F";
+		// System.out.print(emoji);
+		// System.out.println("\u001b[37m \u001b[44m " + tituloCompleto + " \u001b[m");
 
-	// metodo para criar estrelas de acordo com a classificaçao
-	public static String rating(int stars) {
-		String star = "\n\u2B50\n";
-		return star.repeat(stars);
+		// String poster = conteudosMap.get("hdurl");
+		// String classificacao = conteudosMap.get("imDbRating");
+		// System.out.println("\u001b[37m \u001b[44m nota: " + classificacao + "
+		// \u001b[m");
+		// int stars = Integer.parseInt(classificacao.substring(0, 1));
+
+		// for (int i = 1; i <= stars; i++) {
+		// System.out.print("\u2B50");
+		// }
+		// System.out.println();
+		// }
 	}
 }
