@@ -38,9 +38,15 @@ Nesta segunda aula vamos criar um gerador de figurinhas explorando outras biblio
 
 ##  Desafios da Aula 03 🏷️
 
-Agora vamos construir uma API REST para expor nosso próprio conteúdo, utilizando ferramentas profissionais como o Spring Framework e um banco de dados NoSQL.
+Chegou o momento de pegarmos os filmes do IMDb e gerar figurinhas com os pôsteres, aproveitando para melhorar nosso código com as refatorações necessárias para torná-lo mais flexível e fácil de entender.
 
-Boas-vindas à quarta aula da Imersão Java!
+- `Transformar a classe que representa os conteúdos em um Record, disponível a partir do Java 16`
+- `Criar as suas próprias exceções e usá-las na classe que implementa o cliente HTTP`
+- `Usar recursos do Java 8 e posterior, como Streams e Lambdas, para mapear uma lista em uma outra`
+- `Criar uma Enum que une, como configurações, a URL da API e o extrator utilizado`
+- `Desafio supremo: consumir outras APIs que contém imagens, como a da Marvel, que é bem diferente.`
+
+##  Desafios da Aula 04 🏷️
 
 Agora vamos construir uma API REST para expor nosso próprio conteúdo, utilizando ferramentas profissionais como o Spring Framework e um banco de dados NoSQL.
 
@@ -50,6 +56,6 @@ Agora vamos construir uma API REST para expor nosso próprio conteúdo, utilizan
 - `Retornar o status 201 quando um recurso (linguagem, no nosso caso) for cadastrado através do POST;`
 - `Desafio supremo: Aplicar modificações parciais no recurso através do método PATCH, por exemplo, modificando o número de votos ou de pessoas que utilizam cada linguagem de programação.`
 
-##  Desafios da Aula 04 🏷️
+##  Desafios da Aula 05 🏷️
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
