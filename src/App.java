@@ -10,14 +10,15 @@ public class App {
 
 	public static void main(String[] args) throws Exception {
 
-		String urlAPINASA = API.API_NASA.getUrlApi();
+		//String urlAPINASA = API.API_NASA.getUrlApi();
+		String urlLinguagem = API.API_LINGUAGENS.getUrlApi();
 		// String urlApiIMDBPopular = API.API_IMDB_MOST_POPULAR_MOVIES.getUrlApi();
 		// String urlApiTop250 = API.API_IMDB_TOP250_MOVIES.getUrlApi();
 		// chamando o metodo retornaDadosApí() para retornar os dados da api:
 		ClienteHttp clienteHttp = new ClienteHttp();
-		String body = clienteHttp.retornaDadosApi(urlAPINASA);
+		String body = clienteHttp.retornaDadosApi(urlLinguagem);
 
-		ExtratorDeConteudos extratorDeConteudos = API.API_NASA.getExtratorDeConteudos();
+		ExtratorDeConteudos extratorDeConteudos = API.API_LINGUAGENS.getExtratorDeConteudos();
 		GeradoraDeFigurinhas geradoraDeFigurinhas = new GeradoraDeFigurinhas();
 		List<Conteudo> extrairConteudos = extratorDeConteudos.extrairConteudos(body);
 		for (Conteudo conteudo : extrairConteudos) {

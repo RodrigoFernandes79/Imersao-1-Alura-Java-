@@ -17,6 +17,12 @@ public enum API {
 					"&&start_date=2023-03-16&&end_date=2023-03-18",
 			new ExtratorDeConteudosDaNasa()
 
+	),
+	API_LINGUAGENS(
+			"LINGUAGENS: API Criada no Projeto",
+			"http://localhost:8080/linguagens",
+			new ExtratorDeConteudosDeLinguagens()
+
 	);
 
 	private final String descricao;
