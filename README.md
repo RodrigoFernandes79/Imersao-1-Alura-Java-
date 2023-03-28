@@ -40,6 +40,10 @@ Nesta segunda aula vamos criar um gerador de figurinhas explorando outras biblio
 
 Chegou o momento de pegarmos os filmes do IMDb e gerar figurinhas com os pôsteres, aproveitando para melhorar nosso código com as refatorações necessárias para torná-lo mais flexível e fácil de entender.
 
+![babylon](https://user-images.githubusercontent.com/83513696/228370908-8b8db079-49cb-47c3-803a-a2ff4a265770.png)
+![nasa](https://user-images.githubusercontent.com/83513696/228371024-054a8f7c-7811-4266-ab50-7d8cedf8c2e3.png)
+
+
 - `Transformar a classe que representa os conteúdos em um Record, disponível a partir do Java 16`
 - `Criar as suas próprias exceções e usá-las na classe que implementa o cliente HTTP`
 - `Usar recursos do Java 8 e posterior, como Streams e Lambdas, para mapear uma lista em uma outra`
@@ -49,6 +53,8 @@ Chegou o momento de pegarmos os filmes do IMDb e gerar figurinhas com os pôster
 ##  Desafios da Aula 04 🏷️
 
 Agora vamos construir uma API REST para expor nosso próprio conteúdo, utilizando ferramentas profissionais como o Spring Framework e um banco de dados NoSQL.
+
+![Java](https://user-images.githubusercontent.com/83513696/228371371-13896fd3-43ea-4983-90e9-3e07d1b8c617.png)
 
 - `Finalizar o CRUD (Create, Read, Update e Delete) para que se possa atualizar e excluir uma linguagem cadastrada;`
 - `Devolver a listagem ordenada pelo ranking;`
