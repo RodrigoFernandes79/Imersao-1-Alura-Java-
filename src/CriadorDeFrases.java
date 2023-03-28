@@ -2,13 +2,11 @@ public class CriadorDeFrases {
 	// metodo para criar frases de acordo com classificaçao de estrelas
 	public Frases geradorDeFrasesDeAcordoComClassificacao(String classificacao) {
 
-
-
 		String star = "\u2B50";
 		if (classificacao != null) {
 			int ranking = Integer.parseInt(classificacao);
 
-			return geradorDeFrasesDeAcordoComClassificacaoInteiros(ranking);
+			return geradorDeFrasesDeAcordoComClassificacao(ranking);
 		}
 
 		String frase = "MANEIRO!";
@@ -16,7 +14,7 @@ public class CriadorDeFrases {
 		return new Frases(estrelas, frase);
 	}
 
-	public Frases geradorDeFrasesDeAcordoComClassificacaoInteiros(int classificacao) {
+	public Frases geradorDeFrasesDeAcordoComClassificacao(int classificacao) {
     String star = "\u2B50";
     if (classificacao <= 10) {
         String frase = "TOOPZERA";

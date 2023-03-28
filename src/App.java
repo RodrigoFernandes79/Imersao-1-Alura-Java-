@@ -12,7 +12,7 @@ public class App {
 
 		//String urlAPINASA = API.API_NASA.getUrlApi();
 		String urlLinguagem = API.API_LINGUAGENS.getUrlApi();
-		// String urlApiIMDBPopular = API.API_IMDB_MOST_POPULAR_MOVIES.getUrlApi();
+		// String urlApiIMDBPopular = API.API_IMDB_TOP250_MOVIES.getUrlApi();
 		// String urlApiTop250 = API.API_IMDB_TOP250_MOVIES.getUrlApi();
 		// chamando o metodo retornaDadosApí() para retornar os dados da api:
 		ClienteHttp clienteHttp = new ClienteHttp();
