@@ -1,7 +1,18 @@
+
 ## Alura Stickers - Imersão Java - Alura 🤖
 #ImersãoJava
 
 Projeto em Java realizado através da imersão Java Alura 1. A aplicação consome algumas API's como a do IMDB, da NASA e a languagesAPI(criada durante o evento) com as informações retornadas por elas é feita a criação de stickers para o Whatsapp.
+
+## ✔️Técnicas e tecnologias utilizadas
+- `☕Java 17`
+- `💻Visual Studio Code`
+- `📚Paradigma de orientação a objetos`
+- `♨️Spring Boot`
+- `📊MongoDb`
+- `🐋Docker`
+- `🗃️Makefile`
+- `☁️Heroku`
 
 ## Desafios da Aula 01 🏷️
 
@@ -63,5 +74,18 @@ Agora vamos construir uma API REST para expor nosso próprio conteúdo, utilizan
 - `Desafio supremo: Aplicar modificações parciais no recurso através do método PATCH, por exemplo, modificando o número de votos ou de pessoas que utilizam cada linguagem de programação.`
 
 ##  Desafios da Aula 05 🏷️
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+
+Para fechar com chave de ouro, vamos tornar nossa aplicação acessível por qualquer pessoa, fazendo o deploy na nuvem. Além disso, vamos gerar figurinhas a partir do conteúdo dessa nossa API.
+
+https://linguagens-api-alura-mongo.herokuapp.com/linguagens
+
+# :hammer: Funcionalidades do projeto
+
+- `clonar repositório`: git clone https://github.com/RodrigoFernandes79/Imersao-1-Alura-Java-
+
+# Autor
+
+Rodrigo Holanda Fernandes
+
+
 
