@@ -20,7 +20,7 @@ public enum API {
 	),
 	API_LINGUAGENS(
 			"LINGUAGENS: API Criada no Projeto",
-			"http://localhost:8080/linguagens",
+			"https://linguagens-api-alura-mongo.herokuapp.com/linguagens",
 			new ExtratorDeConteudosDeLinguagens()
 
 	);
